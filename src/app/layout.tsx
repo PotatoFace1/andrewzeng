@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Zeng Portfolio",
-  description: "Mechanical Engineer | CS Minor | Aerospace Focus",
+  title: "Andrew Zeng",
+  description: "Mechanical Engineer | CS Minor",
 };
 
 export default function RootLayout({
