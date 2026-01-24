@@ -21,17 +21,16 @@ export default function Home() {
           <a href="/about" className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600">
             Contact
           </a>
-       <a
+          <a
             href="https://github.com/PotatoFace1/andrewzeng"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold leading-6 text-white hover:text-gray-400 transition-colors"
-        >
-          GITHUB
-        </a>
+            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
+          >
+            Github
+          </a>
 
 
-   
         </nav>
       </header>
 
