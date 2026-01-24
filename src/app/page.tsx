@@ -18,7 +18,7 @@ export default function Home() {
             Resume
           </a>
 
-          <a href="/about" className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600">
+          <a href="/contact" className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600">
             Contact
           </a>
           <a
