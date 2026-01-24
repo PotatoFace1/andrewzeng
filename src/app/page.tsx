@@ -11,7 +11,7 @@ export default function Home() {
             Projects
           </a>
           <a
-            href="/Andrew Zeng Resume MAY 2025.pdf"
+            href="/Zeng Resume Jan 26.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600">
@@ -33,7 +33,7 @@ export default function Home() {
         <h2 className="text-4xl sm:text-4xl font-bold mb-4">
           hello – i&apos;m <span className="underline-hover">andrew</span>
         </h2>
-        <h3 className="text-2xl sm:text-2xl font-semibold mb-6 text-gray-300">BA of mechanical engineering + minor of computer science</h3>
+        <h3 className="text-2xl sm:text-2xl font-semibold mb-6 text-gray-300">BA of electrical engineering + minor of computer science</h3>
         <h4 className="text-lg sm:text-xl mb-8 text-gray-400"> @Northeastern University</h4>
         <a
           href="/projects"
