@@ -30,7 +30,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/PotatoFace1/andrewzeng"
+            href="https://github.com/PotatoFace1"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
