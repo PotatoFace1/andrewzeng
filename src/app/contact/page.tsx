@@ -34,7 +34,6 @@ export default function ContactPage() {
                 Email
               </h2>
               <a
-                href="mailto:zeng.and@northeastern.edu"
                 className="text-lg hover:text-blue-400 transition"
               >
                 zeng.and@northeastern.edu
