@@ -74,7 +74,7 @@ export default function ContactPage() {
                 Location
               </h2>
               <p className="text-lg text-gray-400">
-                Boston, MA · Open to relocation
+                Pittsburgh, PA - Boston, MA
               </p>
             </div>
 
