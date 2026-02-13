@@ -7,6 +7,13 @@ export default function Home() {
         <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12 text-sm font-bold uppercase tracking-wide">
 
           <a
+            href="/projects"
+            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
+          >
+            Projects
+          </a>
+
+          <a
             href="/Zeng%20Co-op%20Resume%20(3).pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -41,7 +48,7 @@ export default function Home() {
         </h2>
 
         <h3 className="text-2xl sm:text-2xl font-semibold mb-6 text-gray-300">
-          BA of electrical engineering + minor of computer science
+          BS in electrical engineering + minor in computer science
         </h3>
 
         <h4 className="text-lg sm:text-xl mb-8 text-gray-400">
