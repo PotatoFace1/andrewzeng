@@ -11,7 +11,7 @@ export default function ContactPage() {
         <div className="w-full">
           <div className="relative w-full aspect-square rounded-xl overflow-hidden">
             <Image
-              src="/_DSC2635.jpeg"  // put image inside /public
+              src="/contactphoto.jpeg"  // put image inside /public
               alt="Contact"
               fill
               className="object-cover"
@@ -25,9 +25,6 @@ export default function ContactPage() {
 
           <div>
             <h1 className="text-4xl font-bold mb-4">Contact</h1>
-            <p className="text-lg text-gray-400">
-              Feel free to reach out for collaboration, internships, or engineering opportunities.
-            </p>
           </div>
 
           <div className="space-y-8">
