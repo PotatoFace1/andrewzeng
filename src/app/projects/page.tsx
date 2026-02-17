@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Custom BUS PCB",
     slug: "custom-bus-pcb",
-    image: "/rocketengine.jpg",
+    image: "/pcb.png",
   },
   {
     title: "RC Car Platform",
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Go-Kart",
     slug: "go-kart",
-    image: "/fuel-cell.jpg",
+    image: "/go-kart.png",
   },
   {
     title: "Fuel Cell",
