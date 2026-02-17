@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-black text-gray-300 font-sans">
@@ -6,12 +8,12 @@ export default function Home() {
       <header className="p-8 border-b">
         <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12 text-sm font-bold uppercase tracking-wide">
 
-          <a
+          <Link
             href="/projects"
             className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
           >
             Projects
-          </a>
+          </Link>
 
           <a
             href="/Zeng%20Co-op%20Resume%20(5).pdf"
@@ -22,12 +24,12 @@ export default function Home() {
             Resume
           </a>
 
-          <a
+          <Link
             href="/contact"
             className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
           >
             Contact
-          </a>
+          </Link>
 
           <a
             href="https://github.com/PotatoFace1"
@@ -55,12 +57,12 @@ export default function Home() {
           @Northeastern University
         </h4>
 
-        <a
+        <Link
           href="/projects"
           className="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-300 transition"
         >
           View My Work
-        </a>
+        </Link>
       </section>
 
     </main>
