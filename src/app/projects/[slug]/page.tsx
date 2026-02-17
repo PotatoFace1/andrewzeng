@@ -1,11 +1,11 @@
-interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
-}
+import { notFound } from "next/navigation";
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = params;
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
   const projectDetails: Record<
     string,
@@ -41,11 +41,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const project = projectDetails[slug];
 
   if (!project) {
-    return (
-      <main className="min-h-screen flex items-center justify-center text-white">
-        <h1 className="text-3xl">Project Not Found</h1>
-      </main>
-    );
+    notFound();
   }
 
   return (
