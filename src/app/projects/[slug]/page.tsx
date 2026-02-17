@@ -6,7 +6,6 @@ type Project = {
 };
 
 const projectDetails: Record<string, Project> = {
-
   "pocket-rocket": {
     title: "Pocket Rocket",
     description:
