@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Fuel Cell",
     slug: "fuel-cell",
-    image: "/temp.png",
+    image: "/fuelcell.png",
   },
 ];
 
