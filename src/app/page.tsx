@@ -2,69 +2,112 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-black text-gray-300 font-sans">
+    <main className="site-shell text-slate-100">
+      <div className="max-w-6xl mx-auto">
+        <header className="surface-card px-6 py-5 md:px-8 md:py-6">
+          <nav className="flex flex-wrap items-center justify-center md:justify-between gap-4 text-sm font-semibold uppercase tracking-[0.16em]">
+            <span className="text-slate-300/90 font-[var(--font-space-grotesk)]">
+              Andrew Zeng
+            </span>
+            <div className="flex flex-wrap justify-center gap-5 sm:gap-8">
+              <Link
+                href="/projects"
+                className="nav-link text-slate-300 hover:text-white transition"
+              >
+                Projects
+              </Link>
+              <a
+                href="/Zeng%20Co-op%20Resume%20(5).pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link text-slate-300 hover:text-white transition"
+              >
+                Resume
+              </a>
+              <Link
+                href="/contact"
+                className="nav-link text-slate-300 hover:text-white transition"
+              >
+                Contact
+              </Link>
+              <a
+                href="https://github.com/PotatoFace1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link text-slate-300 hover:text-white transition"
+              >
+                GitHub
+              </a>
+            </div>
+          </nav>
+        </header>
 
-      {/* NAVIGATION */}
-      <header className="p-8 border-b">
-        <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 md:gap-12 text-sm font-bold uppercase tracking-wide">
+        <section className="mt-10 md:mt-14 surface-card px-8 py-14 md:px-14 md:py-20">
+          <p className="text-xs uppercase tracking-[0.25em] text-slate-400 mb-5">
+            Electrical Engineering x CS
+          </p>
+          <h1 className="font-[var(--font-space-grotesk)] text-4xl md:text-6xl font-semibold leading-tight text-white">
+            Building systems where hardware and software meet.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
+            I design and ship engineering projects across embedded systems,
+            controls, and full-stack interfaces with a focus on practical,
+            reliable execution.
+          </p>
 
-          <Link
-            href="/projects"
-            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
-          >
-            Projects
-          </Link>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              href="/projects"
+              className="btn-primary px-7 py-3 rounded-xl font-semibold transition"
+            >
+              View My Work
+            </Link>
+            <Link
+              href="/contact"
+              className="btn-ghost px-7 py-3 rounded-xl font-semibold transition"
+            >
+              Let&apos;s Connect
+            </Link>
+          </div>
 
-          <a
-            href="/Zeng%20Co-op%20Resume%20(5).pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
-          >
-            Resume
-          </a>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <span className="chip">Embedded Systems</span>
+            <span className="chip">Signal Processing</span>
+            <span className="chip">PCB + Controls</span>
+            <span className="chip">Full-Stack Prototyping</span>
+          </div>
+        </section>
 
-          <Link
-            href="/contact"
-            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
-          >
-            Contact
-          </Link>
-
-          <a
-            href="https://github.com/PotatoFace1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-link text-sm font-bold uppercase tracking-wide text-gray-300 hover:text-red-600"
-          >
-            Github
-          </a>
-
-        </nav>
-      </header>
-
-      {/* HERO SECTION */}
-      <section className="flex flex-col justify-center items-center text-center px-6 py-32 sm:py-48">
-        <h2 className="text-4xl sm:text-4xl font-bold mb-4">
-          hello – i&apos;m <span className="underline-hover">andrew</span>
-        </h2>
-
-        <h3 className="text-2xl sm:text-2xl font-semibold mb-6 text-gray-300">
-          BS in electrical engineering + minor in computer science
-        </h3>
-
-        <h4 className="text-lg sm:text-xl mb-8 text-gray-400">
-          @Northeastern University
-        </h4>
-
-        <Link
-          href="/projects"
-          className="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-300 transition"
-        >
-          View My Work
-        </Link>
-      </section>
-
+        <section className="mt-8 grid md:grid-cols-3 gap-4 text-slate-300">
+          <article className="surface-card p-5">
+            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Education
+            </p>
+            <p className="mt-3 font-medium">Northeastern University</p>
+            <p className="mt-1 text-slate-400 text-sm">
+              BS Electrical Engineering, CS Minor
+            </p>
+          </article>
+          <article className="surface-card p-5">
+            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Focus
+            </p>
+            <p className="mt-3 font-medium">Hardware + software integration</p>
+            <p className="mt-1 text-slate-400 text-sm">
+              End-to-end engineering from concept to validation
+            </p>
+          </article>
+          <article className="surface-card p-5">
+            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
+              Location
+            </p>
+            <p className="mt-3 font-medium">Boston, MA / Pittsburgh, PA</p>
+            <p className="mt-1 text-slate-400 text-sm">
+              Open to project and co-op opportunities
+            </p>
+          </article>
+        </section>
+      </div>
     </main>
   );
 }
