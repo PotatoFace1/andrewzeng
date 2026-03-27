@@ -8,7 +8,7 @@ const projects = [
   {
     title: "FMCW Radar",
     slug: "fmcw-radar",
-    image: "/temp.png",
+    image: "/radar.jpeg",
   },
   {
     title: "Custom BUS PCB",
