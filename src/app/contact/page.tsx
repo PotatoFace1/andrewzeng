@@ -1,20 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import ContactPhotoCarousel from "./contact-photo-carousel";
 
 export default function ContactPage() {
   return (
     <main className="site-shell text-slate-100">
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-stretch">
         <div className="surface-card p-4 md:p-6">
-          <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-white/10">
-            <Image
-              src="/contactphoto.jpeg"
-              alt="Contact"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <ContactPhotoCarousel />
         </div>
 
         <div className="surface-card px-8 py-10 md:px-10 md:py-12">
