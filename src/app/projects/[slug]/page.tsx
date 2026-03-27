@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function ProjectPage({
@@ -80,12 +81,12 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      <a
+      <Link
         href="/projects"
         className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition"
       >
         ← Back to Projects
-      </a>
+      </Link>
 
     </div>
 

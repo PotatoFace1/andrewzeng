@@ -5,27 +5,27 @@ const projects = [
   {
     title: "FMCW Radar",
     slug: "FMCW-radar",
-    image: "/image1.jpg",
+    image: "/temp.png",
   },
   {
     title: "Custom BUS PCB",
     slug: "custom-bus-pcb",
-    image: "/pcb.png",
+    image: "/temp.png",
   },
   {
     title: "RC Car Platform",
     slug: "rc-car",
-    image: "/canbus.jpg",
+    image: "/temp.png",
   },
   {
     title: "Go-Kart",
     slug: "go-kart",
-    image: "/go-kart.png",
+    image: "/temp.png",
   },
   {
     title: "Fuel Cell",
     slug: "fuel-cell",
-    image: "/rccar.jpg",
+    image: "/temp.png",
   },
 ];
 
