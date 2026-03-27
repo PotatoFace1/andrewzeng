@@ -66,7 +66,7 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-black text-gray-300 px-6 py-24 md:py-32">
+    <main className="site-shell text-slate-100">
       <div className="sticky top-4 z-30 mb-10 md:mb-14">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#0b1220]/80 backdrop-blur-md px-4 py-3 md:px-5">
         <Link
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
                 priority
               />
             </div>
-            <p className="mt-5 text-sm uppercase tracking-[0.2em] text-gray-500">
+            <p className="mt-5 text-sm uppercase tracking-[0.2em] text-slate-400">
               Scroll to explore
             </p>
             <h2 className="mt-2 text-3xl font-semibold text-white">{activeProject.title}</h2>
@@ -111,8 +111,8 @@ export default function ProjectsPage() {
                 data-project-card={project.slug}
                 className={`group block rounded-2xl border px-6 py-8 md:px-8 md:py-10 transition-all duration-500 ${
                   isActive
-                    ? "border-blue-400/70 bg-white/[0.06] shadow-lg shadow-blue-900/20"
-                    : "border-white/10 bg-white/[0.02] hover:border-white/30 hover:bg-white/[0.05]"
+                    ? "border-blue-300/70 bg-slate-900/70 shadow-lg shadow-blue-900/20"
+                    : "border-white/10 bg-slate-950/50 hover:border-slate-300/30 hover:bg-slate-900/60"
                 }`}
               >
                 <div className="lg:hidden relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
@@ -124,17 +124,17 @@ export default function ProjectsPage() {
                   />
                 </div>
 
-                <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-3">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400 mb-3">
                   Project {index + 1}
                 </p>
                 <h3
                   className={`text-2xl md:text-3xl font-semibold transition ${
-                    isActive ? "text-white" : "text-gray-200 group-hover:text-white"
+                    isActive ? "text-white" : "text-slate-200 group-hover:text-white"
                   }`}
                 >
                   {project.title}
                 </h3>
-                <p className="mt-4 text-gray-400">
+                <p className="mt-4 text-slate-400">
                   Open project details and technical highlights.
                 </p>
               </Link>
