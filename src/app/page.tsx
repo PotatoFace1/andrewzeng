@@ -52,6 +52,7 @@ export default function Home() {
           <p className="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
           Building real-world systems in embedded, radar, and signal processing.
           Focused on hardware-software integration and real-time systems. 
+          <br />
           Incoming @Westinghouse Electric Co.
           </p>
 
