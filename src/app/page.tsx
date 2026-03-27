@@ -47,7 +47,7 @@ export default function Home() {
             Electrical Engineering x CS @Northeastern University
           </p>
           <h1 className="font-[var(--font-space-grotesk)] text-4xl md:text-6xl font-semibold leading-tight text-white">
-            Hi, I'm Andrew.
+            Hi, I&apos;m Andrew.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
           Building real-world systems in embedded, radar, and signal processing.
