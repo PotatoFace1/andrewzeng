@@ -53,14 +53,14 @@ export default function Home() {
           Building real-world systems in embedded, radar, and signal processing.
           Focused on hardware-software integration and real-time systems. 
           <br />
-          Incoming @{" "}
+          Incoming intern @{" "}
           <a
             href="https://westinghousenuclear.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-white underline decoration-slate-500/50 underline-offset-[3px] hover:text-blue-300 hover:decoration-blue-300/80 transition"
           >
-            Westinghouse Electric Co.
+            Westinghouse Nuclear Co.
           </a>
           </p>
 
