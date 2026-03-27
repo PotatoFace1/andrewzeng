@@ -67,7 +67,20 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0d0d0d] via-[#0a0a0a] to-black text-gray-300 px-6 py-24 md:py-32">
-      <h1 className="text-5xl font-bold text-center mb-16 md:mb-20">Projects.</h1>
+      <div className="sticky top-4 z-30 mb-10 md:mb-14">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#0b1220]/80 backdrop-blur-md px-4 py-3 md:px-5">
+        <Link
+          href="/"
+          className="btn-ghost inline-block px-5 py-2.5 rounded-xl font-semibold transition"
+        >
+          ← Back to Home
+        </Link>
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-white">
+          Projects.
+        </h1>
+        <div className="w-[126px] hidden md:block" aria-hidden="true" />
+        </div>
+      </div>
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16">
         <div className="hidden lg:block">
