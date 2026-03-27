@@ -4,7 +4,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "FMCW Radar",
-    slug: "FMCW-radar",
+    slug: "fmcw-radar",
     image: "/temp.png",
   },
   {
