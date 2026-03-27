@@ -44,15 +44,14 @@ export default function Home() {
 
         <section className="mt-10 md:mt-14 surface-card px-8 py-14 md:px-14 md:py-20">
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400 mb-5">
-            Electrical Engineering x CS
+            Electrical Engineering x CS @Northeastern University
           </p>
           <h1 className="font-[var(--font-space-grotesk)] text-4xl md:text-6xl font-semibold leading-tight text-white">
-            Building systems where hardware and software meet.
+            Hi, I'm Andrew.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
-            I design and ship engineering projects across embedded systems,
-            controls, and full-stack interfaces with a focus on practical,
-            reliable execution.
+          Building real-world systems in embedded, radar, and signal processing.
+          Focused on hardware-software integration and real-time systems. 
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
