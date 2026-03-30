@@ -14,32 +14,32 @@ export default function ProjectDetailPage({
   tools,
 }: ProjectDetailPageProps) {
   return (
-    <main className="site-shell text-slate-100">
-      <div className="max-w-5xl mx-auto">
-        <section className="surface-card px-7 py-10 md:px-12 md:py-14">
-          <p className="text-xs uppercase tracking-[0.22em] text-slate-400 mb-4">
-            Project Detail
-          </p>
-          <h1 className="font-[var(--font-space-grotesk)] text-4xl md:text-5xl font-semibold text-white">
+    <main className="site-shell text-zinc-200">
+      <div className="mx-auto max-w-3xl">
+        <section className="surface-card px-6 py-10 md:px-9 md:py-12">
+          <p className="label mb-3">Project</p>
+          <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-zinc-50 md:text-4xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-3xl text-lg text-slate-300 leading-relaxed">
+          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-zinc-400">
             {overview}
           </p>
 
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
-            <section className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
-              <h2 className="text-xl font-semibold text-white">Technical Highlights</h2>
-              <ul className="list-disc pl-6 mt-4 space-y-2 text-slate-300">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <section className="rounded-md border border-zinc-800/90 bg-zinc-950/30 p-5">
+              <h2 className="text-sm font-medium text-zinc-100">
+                Technical highlights
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-4 text-sm leading-relaxed text-zinc-400">
                 {highlights.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
             </section>
 
-            <section className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
-              <h2 className="text-xl font-semibold text-white">Tools Used</h2>
-              <div className="mt-4 flex flex-wrap gap-2">
+            <section className="rounded-md border border-zinc-800/90 bg-zinc-950/30 p-5">
+              <h2 className="text-sm font-medium text-zinc-100">Tools</h2>
+              <div className="mt-3 flex flex-wrap gap-2">
                 {tools.map((tool) => (
                   <span key={tool} className="chip">
                     {tool}
@@ -52,9 +52,9 @@ export default function ProjectDetailPage({
           <div className="mt-10">
             <Link
               href="/projects"
-              className="btn-ghost inline-block px-6 py-3 rounded-xl font-semibold transition"
+              className="btn-ghost inline-block px-5 py-2.5 text-sm"
             >
-              ← Back to Projects
+              ← Back to projects
             </Link>
           </div>
         </section>

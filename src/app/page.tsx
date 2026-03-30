@@ -2,39 +2,33 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="site-shell text-slate-100">
-      <div className="max-w-6xl mx-auto">
-        <header className="surface-card px-6 py-5 md:px-8 md:py-6">
-          <nav className="flex flex-wrap items-center justify-center md:justify-between gap-4 text-sm font-semibold uppercase tracking-[0.16em]">
-            <span className="text-slate-300/90 font-[var(--font-space-grotesk)]">
+    <main className="site-shell text-zinc-200">
+      <div className="mx-auto max-w-5xl">
+        <header className="surface-card px-5 py-4 md:px-6 md:py-5">
+          <nav className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <span className="font-[var(--font-space-grotesk)] text-sm font-medium tracking-tight text-zinc-100">
               Andrew Zeng
             </span>
-            <div className="flex flex-wrap justify-center gap-5 sm:gap-8">
-              <Link
-                href="/projects"
-                className="nav-link text-slate-300 hover:text-white transition"
-              >
+            <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium">
+              <Link href="/projects" className="nav-link">
                 Projects
               </Link>
               <a
                 href="/Zeng%20Co-op%20Resume%20(5).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="nav-link text-slate-300 hover:text-white transition"
+                className="nav-link"
               >
                 Resume
               </a>
-              <Link
-                href="/contact"
-                className="nav-link text-slate-300 hover:text-white transition"
-              >
+              <Link href="/contact" className="nav-link">
                 Contact
               </Link>
               <a
                 href="https://github.com/PotatoFace1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="nav-link text-slate-300 hover:text-white transition"
+                className="nav-link"
               >
                 GitHub
               </a>
@@ -42,77 +36,78 @@ export default function Home() {
           </nav>
         </header>
 
-        <section className="mt-10 md:mt-14 surface-card px-8 py-14 md:px-14 md:py-20">
-          <p className="text-xs uppercase tracking-[0.25em] text-slate-400 mb-5">
-            Electrical Engineering x CS @Northeastern University
+        <section className="surface-card mt-8 px-6 py-12 md:mt-10 md:px-10 md:py-16">
+          <p className="label mb-4">
+            Electrical Engineering × CS · Northeastern University
           </p>
-          <h1 className="font-[var(--font-space-grotesk)] text-4xl md:text-6xl font-semibold leading-tight text-white">
+          <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold leading-[1.15] tracking-tight text-zinc-50 md:text-5xl">
             Hi, I&apos;m Andrew.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-slate-300 leading-relaxed">
-          Building real-world systems in embedded, radar, and signal processing.
-          Focused on hardware-software integration and real-time systems. 
-          <br />
-          Incoming intern @{" "}
-          <a
-            href="https://westinghousenuclear.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-white underline decoration-slate-500/50 underline-offset-[3px] hover:text-blue-300 hover:decoration-blue-300/80 transition"
-          >
-            Westinghouse Nuclear Co.
-          </a>
-          </p>
-
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              href="/projects"
-              className="btn-primary px-7 py-3 rounded-xl font-semibold transition"
-            >
-              View My Work
-            </Link>
-            <Link
-              href="/contact"
-              className="btn-ghost px-7 py-3 rounded-xl font-semibold transition"
-            >
-              Let&apos;s Connect
-            </Link>
+          <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-zinc-400">
+            <p>
+              Building real-world systems in embedded, radar, and signal
+              processing. Focused on hardware–software integration and real-time
+              systems.
+            </p>
+            <p className="text-zinc-400">
+              Incoming intern @{" "}
+              <a
+                href="https://westinghousenuclear.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-prose"
+              >
+                Westinghouse Nuclear Co.
+              </a>
+            </p>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <span className="chip">Embedded Systems</span>
-            <span className="chip">Signal Processing</span>
-            <span className="chip">PCB + Controls</span>
-            <span className="chip">Full-Stack Prototyping</span>
+            <Link
+              href="/projects"
+              className="btn-primary px-5 py-2.5"
+            >
+              View work
+            </Link>
+            <Link href="/contact" className="btn-ghost px-5 py-2.5">
+              Contact
+            </Link>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-2">
+            <span className="chip">Embedded</span>
+            <span className="chip">Signal processing</span>
+            <span className="chip">PCB &amp; controls</span>
+            <span className="chip">Prototyping</span>
           </div>
         </section>
 
-        <section className="mt-8 grid md:grid-cols-3 gap-4 text-slate-300">
-          <article className="surface-card p-5">
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
-              Education
+        <section className="mt-6 grid gap-4 md:grid-cols-3">
+          <article className="surface-card p-6">
+            <p className="label mb-3">Education</p>
+            <p className="text-sm font-medium text-zinc-100">
+              Northeastern University
             </p>
-            <p className="mt-3 font-medium">Northeastern University</p>
-            <p className="mt-1 text-slate-400 text-sm">
-              BS Electrical Engineering, CS Minor
-            </p>
-          </article>
-          <article className="surface-card p-5">
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
-              Focus
-            </p>
-            <p className="mt-3 font-medium">Hardware + software integration</p>
-            <p className="mt-1 text-slate-400 text-sm">
-              End-to-end engineering from concept to validation
+            <p className="mt-1 text-sm text-zinc-500">
+              BS Electrical Engineering, CS minor
             </p>
           </article>
-          <article className="surface-card p-5">
-            <p className="text-xs uppercase tracking-[0.18em] text-slate-400">
-              Location
+          <article className="surface-card p-6">
+            <p className="label mb-3">Focus</p>
+            <p className="text-sm font-medium text-zinc-100">
+              Hardware + software integration
             </p>
-            <p className="mt-3 font-medium">Boston, MA / Pittsburgh, PA</p>
-            <p className="mt-1 text-slate-400 text-sm">
-              Open to project and co-op opportunities
+            <p className="mt-1 text-sm text-zinc-500">
+              Concept through validation
+            </p>
+          </article>
+          <article className="surface-card p-6">
+            <p className="label mb-3">Location</p>
+            <p className="text-sm font-medium text-zinc-100">
+              Boston, MA / Pittsburgh, PA
+            </p>
+            <p className="mt-1 text-sm text-zinc-500">
+              Open to roles &amp; collaborations
             </p>
           </article>
         </section>

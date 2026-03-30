@@ -66,26 +66,26 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <main className="site-shell text-slate-100">
-      <div className="sticky top-4 z-30 mb-10 md:mb-14">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#0b1220]/80 backdrop-blur-md px-4 py-3 md:px-5">
+    <main className="site-shell text-zinc-200">
+      <div className="sticky top-4 z-30 mb-8 md:mb-10">
+        <div className="surface-bar mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 md:px-5">
         <Link
           href="/"
-          className="btn-ghost inline-block px-5 py-2.5 rounded-xl font-semibold transition"
+          className="btn-ghost inline-block px-4 py-2 text-sm"
         >
-          ← Back to Home
+          ← Home
         </Link>
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-white">
-          Projects.
+        <h1 className="font-[var(--font-space-grotesk)] text-center text-xl font-semibold tracking-tight text-zinc-50 md:text-2xl">
+          Projects
         </h1>
-        <div className="w-[126px] hidden md:block" aria-hidden="true" />
+        <div className="w-[72px] hidden md:block" aria-hidden="true" />
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:gap-14">
         <div className="hidden lg:block">
           <div className="sticky top-24">
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md border border-zinc-800/90">
               <Image
                 src={activeProject.image}
                 alt={activeProject.title}
@@ -94,14 +94,14 @@ export default function ProjectsPage() {
                 priority
               />
             </div>
-            <p className="mt-5 text-sm uppercase tracking-[0.2em] text-slate-400">
-              Scroll to explore
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold text-white">{activeProject.title}</h2>
+            <p className="label mt-3">Preview</p>
+            <h2 className="mt-1 font-[var(--font-space-grotesk)] text-2xl font-semibold tracking-tight text-zinc-50">
+              {activeProject.title}
+            </h2>
           </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-4">
           {projects.map((project, index) => {
             const isActive = activeSlug === project.slug;
             return (
@@ -109,33 +109,33 @@ export default function ProjectsPage() {
                 key={project.slug}
                 href={`/projects/${project.slug}`}
                 data-project-card={project.slug}
-                className={`group block rounded-2xl border px-6 py-8 md:px-8 md:py-10 transition-all duration-500 ${
+                className={`group block rounded-md border px-5 py-5 transition-colors md:px-6 md:py-6 ${
                   isActive
-                    ? "border-blue-300/70 bg-slate-900/70 shadow-lg shadow-blue-900/20"
-                    : "border-white/10 bg-slate-950/50 hover:border-slate-300/30 hover:bg-slate-900/60"
+                    ? "border-zinc-500/80 bg-zinc-900/50"
+                    : "border-zinc-800/80 bg-zinc-950/40 hover:border-zinc-600/80 hover:bg-zinc-900/35"
                 }`}
               >
-                <div className="lg:hidden relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6">
+                <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-sm border border-zinc-800/80 lg:hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-[1.03] transition duration-500"
+                    className="object-cover transition duration-300 group-hover:opacity-95"
                   />
                 </div>
 
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400 mb-3">
-                  Project {index + 1}
+                <p className="label mb-2">
+                  {String(index + 1).padStart(2, "0")} — Project
                 </p>
                 <h3
-                  className={`text-2xl md:text-3xl font-semibold transition ${
-                    isActive ? "text-white" : "text-slate-200 group-hover:text-white"
+                  className={`font-[var(--font-space-grotesk)] text-xl font-semibold tracking-tight transition-colors md:text-2xl ${
+                    isActive ? "text-zinc-50" : "text-zinc-200 group-hover:text-zinc-50"
                   }`}
                 >
                   {project.title}
                 </h3>
-                <p className="mt-4 text-slate-400">
-                  Open project details and technical highlights.
+                <p className="mt-2 text-sm text-zinc-500">
+                  Overview and technical notes
                 </p>
               </Link>
             );
