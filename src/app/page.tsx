@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  HOME_FEATURED_SLUGS,
   PROJECT_PAGES,
-  PROJECT_SLUG_ORDER,
   PROJECTS_THREAD,
 } from "@/content/project-pages";
 import HeroWaveform from "./hero-waveform";
@@ -99,8 +99,8 @@ export default function Home() {
           <p className="mb-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
             {PROJECTS_THREAD}
           </p>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {PROJECT_SLUG_ORDER.map((slug) => {
+          <div className="grid gap-4 sm:grid-cols-2">
+            {HOME_FEATURED_SLUGS.map((slug) => {
               const p = PROJECT_PAGES[slug];
               const thumb = p.thumbnailSrc;
               const cardTags = p.tags.slice(0, 5);

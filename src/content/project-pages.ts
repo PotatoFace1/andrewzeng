@@ -24,6 +24,9 @@ export const PROJECT_SLUG_ORDER = [
   "fuel-cell",
 ] as const;
 
+/** Homepage “Featured projects” — radar + PCB (Lunabotics) only. */
+export const HOME_FEATURED_SLUGS = ["fmcw-radar", "lunabotics"] as const;
+
 export const PROJECT_PAGES: Record<string, ProjectPageContent> = {
   "fmcw-radar": {
     slug: "fmcw-radar",

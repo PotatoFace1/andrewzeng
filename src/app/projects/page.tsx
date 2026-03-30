@@ -29,28 +29,63 @@ export default function ProjectsPage() {
   );
 
   useEffect(() => {
-    const cards = document.querySelectorAll<HTMLElement>("[data-project-card]");
+    const cards = Array.from(
+      document.querySelectorAll<HTMLElement>("[data-project-card]")
+    );
     if (!cards.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    let raf = 0;
+    const updateActive = () => {
+      const vh = window.innerHeight;
+      const doc = document.documentElement;
+      const maxScroll = doc.scrollHeight - vh;
+      const y = window.scrollY;
+      const edgePx = 8;
 
-        if (visibleEntries[0]) {
-          const slug = visibleEntries[0].target.getAttribute("data-project-card");
-          if (slug) setActiveSlug(slug);
-        }
-      },
-      {
-        threshold: [0.35, 0.6, 0.85],
-        rootMargin: "-15% 0px -20% 0px",
+      if (y <= edgePx && cards[0]) {
+        const slug = cards[0].getAttribute("data-project-card");
+        if (slug) setActiveSlug(slug);
+        return;
       }
-    );
+      if (maxScroll > 0 && y >= maxScroll - edgePx && cards[cards.length - 1]) {
+        const slug = cards[cards.length - 1].getAttribute("data-project-card");
+        if (slug) setActiveSlug(slug);
+        return;
+      }
 
-    cards.forEach((card) => observer.observe(card));
-    return () => observer.disconnect();
+      const centerY = vh / 2;
+      let bestSlug: string | null = null;
+      let bestDist = Infinity;
+
+      for (const card of cards) {
+        const rect = card.getBoundingClientRect();
+        if (rect.bottom <= 0 || rect.top >= vh) continue;
+        const cardCenter = rect.top + rect.height / 2;
+        const dist = Math.abs(cardCenter - centerY);
+        if (dist < bestDist) {
+          bestDist = dist;
+          const slug = card.getAttribute("data-project-card");
+          if (slug) bestSlug = slug;
+        }
+      }
+
+      if (bestSlug) setActiveSlug(bestSlug);
+    };
+
+    const onScrollOrResize = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateActive);
+    };
+
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("resize", onScrollOrResize);
+    updateActive();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", onScrollOrResize);
+      window.removeEventListener("resize", onScrollOrResize);
+    };
   }, []);
 
   return (
