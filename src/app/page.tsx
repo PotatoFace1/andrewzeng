@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroWaveform from "./hero-waveform";
 
 export default function Home() {
   return (
@@ -37,48 +38,53 @@ export default function Home() {
         </header>
 
         <section className="surface-card mt-8 px-6 py-12 md:mt-10 md:px-10 md:py-16">
-          <p className="label mb-4">
-            Electrical Engineering × CS · Northeastern University
-          </p>
-          <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold leading-[1.15] tracking-tight text-zinc-50 md:text-5xl">
-            Hi, I&apos;m Andrew.
-          </h1>
-          <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-zinc-400">
-            <p>
-              Building real-world systems in embedded, radar, and signal
-              processing. Focused on hardware–software integration and real-time
-              systems.
-            </p>
-            <p className="text-zinc-400">
-              Incoming intern @{" "}
-              <a
-                href="https://westinghousenuclear.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-prose"
-              >
-                Westinghouse Nuclear Co.
-              </a>
-            </p>
-          </div>
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+            <div className="min-w-0">
+              <p className="label mb-4">
+                Electrical Engineering × CS · Northeastern University
+              </p>
+              <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold leading-[1.15] tracking-tight text-zinc-50 md:text-5xl">
+                Hi, I&apos;m Andrew.
+              </h1>
+              <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-zinc-400">
+                <p>
+                  Building real-world systems in embedded, radar, and signal
+                  processing. Focused on hardware–software integration and
+                  real-time systems.
+                </p>
+                <p className="text-zinc-400">
+                  Incoming intern @{" "}
+                  <a
+                    href="https://westinghousenuclear.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-prose"
+                  >
+                    Westinghouse Nuclear Co.
+                  </a>
+                </p>
+              </div>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/projects"
-              className="btn-primary px-5 py-2.5"
-            >
-              View work
-            </Link>
-            <Link href="/contact" className="btn-ghost px-5 py-2.5">
-              Contact
-            </Link>
-          </div>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link href="/projects" className="btn-primary px-5 py-2.5">
+                  View work
+                </Link>
+                <Link href="/contact" className="btn-ghost px-5 py-2.5">
+                  Contact
+                </Link>
+              </div>
 
-          <div className="mt-10 flex flex-wrap gap-2">
-            <span className="chip">Embedded</span>
-            <span className="chip">Signal processing</span>
-            <span className="chip">PCB &amp; controls</span>
-            <span className="chip">Prototyping</span>
+              <div className="mt-10 flex flex-wrap gap-2">
+                <span className="chip">Embedded</span>
+                <span className="chip">Signal processing</span>
+                <span className="chip">PCB &amp; controls</span>
+                <span className="chip">Prototyping</span>
+              </div>
+            </div>
+
+            <div className="min-w-0 lg:pl-2">
+              <HeroWaveform />
+            </div>
           </div>
         </section>
 
