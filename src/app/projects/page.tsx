@@ -3,34 +3,22 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  PROJECT_PAGES,
+  PROJECT_SLUG_ORDER,
+  PROJECTS_THREAD,
+} from "@/content/project-pages";
 
-const projects = [
-  {
-    title: "FMCW Radar",
-    slug: "fmcw-radar",
-    image: "/radar2.png",
-  },
-  {
-    title: "Custom BUS PCB",
-    slug: "custom-bus-pcb",
-    image: "/pcb.png",
-  },
-  {
-    title: "RC Car Platform",
-    slug: "rc-car",
-    image: "/temp.png",
-  },
-  {
-    title: "Go-Kart",
-    slug: "go-kart",
-    image: "/go-kart.png",
-  },
-  {
-    title: "Fuel Cell",
-    slug: "fuel-cell",
-    image: "/fuelcell.png",
-  },
-];
+const projects = PROJECT_SLUG_ORDER.map((slug) => {
+  const p = PROJECT_PAGES[slug];
+  return {
+    slug: p.slug,
+    title: p.title,
+    oneLiner: p.oneLiner,
+    image: p.thumbnailSrc ?? "/temp.png",
+    tags: p.tags.slice(0, 5),
+  };
+});
 
 export default function ProjectsPage() {
   const [activeSlug, setActiveSlug] = useState(projects[0].slug);
@@ -67,19 +55,20 @@ export default function ProjectsPage() {
 
   return (
     <main className="site-shell text-zinc-200">
-      <div className="sticky top-4 z-30 mb-8 md:mb-10">
+      <div className="sticky top-4 z-30 mb-6 md:mb-8">
         <div className="surface-bar mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 md:px-5">
-        <Link
-          href="/"
-          className="btn-ghost inline-block px-4 py-2 text-sm"
-        >
-          ← Home
-        </Link>
-        <h1 className="font-[var(--font-space-grotesk)] text-center text-xl font-semibold tracking-tight text-zinc-50 md:text-2xl">
-          Projects
-        </h1>
-        <div className="w-[72px] hidden md:block" aria-hidden="true" />
+          <Link href="/" className="btn-ghost inline-block px-4 py-2 text-sm">
+            ← Home
+          </Link>
+          <h1 className="text-center font-[var(--font-space-grotesk)] text-xl font-semibold tracking-tight text-zinc-50 md:text-2xl">
+            Projects
+          </h1>
+          <div className="hidden w-[72px] md:block" aria-hidden="true" />
         </div>
+      </div>
+
+      <div className="mx-auto mb-10 max-w-5xl px-1">
+        <p className="text-sm leading-relaxed text-zinc-500">{PROJECTS_THREAD}</p>
       </div>
 
       <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:gap-14">
@@ -98,6 +87,9 @@ export default function ProjectsPage() {
             <h2 className="mt-1 font-[var(--font-space-grotesk)] text-2xl font-semibold tracking-tight text-zinc-50">
               {activeProject.title}
             </h2>
+            <p className="mt-2 line-clamp-3 text-sm text-zinc-500">
+              {activeProject.oneLiner}
+            </p>
           </div>
         </div>
 
@@ -134,9 +126,19 @@ export default function ProjectsPage() {
                 >
                   {project.title}
                 </h3>
-                <p className="mt-2 text-sm text-zinc-500">
-                  Overview and technical notes
+                <p className="mt-2 line-clamp-3 text-sm text-zinc-500">
+                  {project.oneLiner}
                 </p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded border border-zinc-800/90 bg-zinc-950/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-zinc-500"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </Link>
             );
           })}

@@ -1,4 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
+import {
+  PROJECT_PAGES,
+  PROJECT_SLUG_ORDER,
+  PROJECTS_THREAD,
+} from "@/content/project-pages";
 import HeroWaveform from "./hero-waveform";
 
 export default function Home() {
@@ -88,7 +94,70 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-6 grid gap-4 md:grid-cols-3">
+        <section className="mt-10">
+          <p className="label mb-2">Featured projects</p>
+          <p className="mb-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
+            {PROJECTS_THREAD}
+          </p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {PROJECT_SLUG_ORDER.map((slug) => {
+              const p = PROJECT_PAGES[slug];
+              const thumb = p.thumbnailSrc;
+              const cardTags = p.tags.slice(0, 5);
+              return (
+                <Link
+                  key={slug}
+                  href={`/projects/${slug}`}
+                  className="surface-card group flex flex-col overflow-hidden transition-colors hover:border-zinc-600/60"
+                >
+                  <div className="relative aspect-[4/3] w-full border-b border-zinc-800/80 bg-zinc-950">
+                    {thumb ? (
+                      <Image
+                        src={thumb}
+                        alt={p.title}
+                        fill
+                        className="object-cover opacity-95 transition group-hover:opacity-100"
+                        sizes="(max-width:768px) 100vw, 33vw"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center text-xs text-zinc-600">
+                        Thumbnail
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h2 className="font-[var(--font-space-grotesk)] text-base font-semibold leading-snug tracking-tight text-zinc-100 group-hover:text-white">
+                      {p.title}
+                    </h2>
+                    <p className="mt-2 line-clamp-3 flex-1 text-xs leading-relaxed text-zinc-500">
+                      {p.oneLiner}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {cardTags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded border border-zinc-800/90 bg-zinc-950/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-zinc-500"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="mt-4 text-xs font-medium text-zinc-400 group-hover:text-zinc-200">
+                      View project →
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+          <p className="mt-6 text-center md:text-left">
+            <Link href="/projects" className="nav-link text-sm text-zinc-500">
+              All projects
+            </Link>
+          </p>
+        </section>
+
+        <section className="mt-10 grid gap-4 md:grid-cols-3">
           <article className="surface-card p-6">
             <p className="label mb-3">Education</p>
             <p className="text-sm font-medium text-zinc-100">
