@@ -268,6 +268,3 @@ The solar-powered cycle worked but was finicky. The 6V panel produced a fuel cel
 export function getProject(slug: string): ProjectPageContent | undefined {
   return PROJECT_PAGES[slug];
 }
-
-export const PROJECTS_THREAD =
-  "Work spans hydrogen and high-voltage power, PCB design, autonomous embedded systems, and radar/signal processing—from energy hardware through integration to sensing.";

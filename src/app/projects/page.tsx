@@ -3,11 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  PROJECT_PAGES,
-  PROJECT_SLUG_ORDER,
-  PROJECTS_THREAD,
-} from "@/content/project-pages";
+import { PROJECT_PAGES, PROJECT_SLUG_ORDER } from "@/content/project-pages";
 
 const projects = PROJECT_SLUG_ORDER.map((slug) => {
   const p = PROJECT_PAGES[slug];
@@ -102,11 +98,7 @@ export default function ProjectsPage() {
         </div>
       </div>
 
-      <div className="mx-auto mb-10 max-w-5xl px-1">
-        <p className="text-sm leading-relaxed text-zinc-500">{PROJECTS_THREAD}</p>
-      </div>
-
-      <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:gap-14">
+      <div className="mx-auto mt-4 grid max-w-5xl gap-10 md:mt-6 lg:grid-cols-2 lg:gap-14">
         <div className="hidden lg:block">
           <div className="sticky top-24">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md border border-zinc-800/90">

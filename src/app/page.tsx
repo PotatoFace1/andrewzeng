@@ -1,10 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  HOME_FEATURED_SLUGS,
-  PROJECT_PAGES,
-  PROJECTS_THREAD,
-} from "@/content/project-pages";
+import { HOME_FEATURED_SLUGS, PROJECT_PAGES } from "@/content/project-pages";
 import HeroWaveform from "./hero-waveform";
 
 export default function Home() {
@@ -95,10 +91,7 @@ export default function Home() {
         </section>
 
         <section className="mt-10">
-          <p className="label mb-2">Featured projects</p>
-          <p className="mb-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
-            {PROJECTS_THREAD}
-          </p>
+          <p className="label mb-6">Featured projects</p>
           <div className="grid gap-4 sm:grid-cols-2">
             {HOME_FEATURED_SLUGS.map((slug) => {
               const p = PROJECT_PAGES[slug];
