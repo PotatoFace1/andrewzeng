@@ -99,7 +99,7 @@ export default function Home() {
           <p className="mb-6 max-w-2xl text-sm leading-relaxed text-zinc-500">
             {PROJECTS_THREAD}
           </p>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {PROJECT_SLUG_ORDER.map((slug) => {
               const p = PROJECT_PAGES[slug];
               const thumb = p.thumbnailSrc;
