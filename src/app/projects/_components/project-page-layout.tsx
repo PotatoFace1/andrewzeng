@@ -4,10 +4,10 @@ import MediaPlaceholder from "./media-placeholder";
 
 export default function ProjectPageLayout({ project }: { project: ProjectPageContent }) {
   return (
-    <main className="site-shell text-zinc-200">
+    <main className="site-shell text-neutral-200">
       <div className="mx-auto max-w-3xl">
         <article className="surface-card overflow-hidden">
-          <div className="border-b border-zinc-800/80 p-5 md:p-6">
+          <div className="border-b border-neutral-800/80 p-5 md:p-6">
             <MediaPlaceholder
               src={project.thumbnailSrc}
               alt={`${project.title} media`}
@@ -17,11 +17,11 @@ export default function ProjectPageLayout({ project }: { project: ProjectPageCon
 
           <div className="px-6 py-9 md:px-9 md:py-11">
             <p className="label mb-3">Project</p>
-            <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-zinc-50 md:text-4xl">
+            <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-neutral-50 md:text-4xl">
               {project.title}
             </h1>
 
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-300">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-300">
               {project.oneLiner}
             </p>
 
@@ -33,8 +33,8 @@ export default function ProjectPageLayout({ project }: { project: ProjectPageCon
               ))}
             </div>
 
-            <p className="mt-6 text-sm text-zinc-500">
-              <span className="text-zinc-600">Timeline · </span>
+            <p className="mt-6 text-sm text-neutral-500">
+              <span className="text-neutral-600">Timeline · </span>
               {project.date}
             </p>
 
@@ -50,7 +50,7 @@ export default function ProjectPageLayout({ project }: { project: ProjectPageCon
                 </a>
               </p>
             ) : (
-              <p className="mt-2 text-sm text-zinc-600">GitHub: N/A</p>
+              <p className="mt-2 text-sm text-neutral-600">GitHub: N/A</p>
             )}
 
             <div className="mt-12 space-y-12">
@@ -61,14 +61,14 @@ export default function ProjectPageLayout({ project }: { project: ProjectPageCon
                   .filter(Boolean);
                 return (
                   <section key={section.heading}>
-                    <h2 className="font-[var(--font-space-grotesk)] text-lg font-semibold tracking-tight text-zinc-100 md:text-xl">
+                    <h2 className="font-[var(--font-space-grotesk)] text-lg font-semibold tracking-tight text-neutral-100 md:text-xl">
                       {section.heading}
                     </h2>
                     <div className="mt-4 space-y-4">
                       {paragraphs.map((p, i) => (
                         <p
                           key={`${section.heading}-${i}`}
-                          className="text-[15px] leading-relaxed text-zinc-400"
+                          className="text-[15px] leading-relaxed text-neutral-400"
                         >
                           {p}
                         </p>
@@ -79,7 +79,7 @@ export default function ProjectPageLayout({ project }: { project: ProjectPageCon
               })}
             </div>
 
-            <div className="mt-12 border-t border-zinc-800/80 pt-8">
+            <div className="mt-12 border-t border-neutral-800/80 pt-8">
               <Link href="/projects" className="btn-ghost inline-block px-5 py-2.5 text-sm">
                 ← Back to projects
               </Link>

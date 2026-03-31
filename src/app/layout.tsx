@@ -37,7 +37,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="min-h-screen bg-[#0a0a0c] font-sans text-zinc-200 antialiased">
+      <body className="min-h-screen bg-background font-sans text-neutral-200 antialiased">
         {children}
       </body>
     </html>

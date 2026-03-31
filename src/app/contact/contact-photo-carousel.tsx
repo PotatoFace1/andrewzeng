@@ -115,7 +115,7 @@ export default function ContactPhotoCarousel() {
 
   return (
     <div className="space-y-4">
-      <div className="relative w-full overflow-hidden rounded-md border border-zinc-800/90">
+      <div className="relative w-full overflow-hidden rounded-md border border-neutral-800/90">
         <div
           ref={trackRef}
           className="flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -141,7 +141,7 @@ export default function ContactPhotoCarousel() {
       </div>
 
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <p className="text-center text-xs text-zinc-500 sm:text-left">
+        <p className="text-center text-xs text-neutral-500 sm:text-left">
           Swipe or scroll to browse photos
         </p>
         <div className="flex items-center gap-2">
@@ -152,8 +152,8 @@ export default function ContactPhotoCarousel() {
               onClick={() => scrollToLogical(i)}
               className={`h-1.5 rounded-full transition-all ${
                 logicalIndex === i
-                  ? "w-8 bg-zinc-200"
-                  : "w-1.5 bg-zinc-600 hover:bg-zinc-500"
+                  ? "w-8 bg-neutral-200"
+                  : "w-1.5 bg-neutral-600 hover:bg-neutral-500"
               }`}
               aria-label={`Show photo ${i + 1}`}
               aria-current={logicalIndex === i}

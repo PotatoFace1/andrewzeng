@@ -3,7 +3,7 @@ import ContactPhotoCarousel from "./contact-photo-carousel";
 
 export default function ContactPage() {
   return (
-    <main className="site-shell text-zinc-200">
+    <main className="site-shell text-neutral-200">
       <section className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 md:items-stretch md:gap-10">
         <div className="surface-card p-4 md:p-5">
           <ContactPhotoCarousel />
@@ -13,7 +13,7 @@ export default function ContactPage() {
           <div className="space-y-10">
             <div>
               <p className="label mb-2">Contact</p>
-              <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-zinc-50 md:text-4xl">
+              <h1 className="font-[var(--font-space-grotesk)] text-3xl font-semibold tracking-tight text-neutral-50 md:text-4xl">
                 Get in touch
               </h1>
             </div>
@@ -23,7 +23,7 @@ export default function ContactPage() {
                 <h2 className="label mb-2">Email</h2>
                 <a
                   href="mailto:zeng.and@northeastern.edu"
-                  className="text-[15px] text-zinc-300 transition hover:text-white"
+                  className="text-[15px] text-neutral-300 transition hover:text-white"
                 >
                   zeng.and@northeastern.edu
                 </a>
@@ -35,7 +35,7 @@ export default function ContactPage() {
                   href="https://github.com/PotatoFace1/andrewzeng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[15px] text-zinc-300 transition hover:text-white"
+                  className="text-[15px] text-neutral-300 transition hover:text-white"
                 >
                   github.com/PotatoFace1/andrewzeng
                 </a>
@@ -47,7 +47,7 @@ export default function ContactPage() {
                   href="https://www.linkedin.com/in/andrew-zeng1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[15px] text-zinc-300 transition hover:text-white"
+                  className="text-[15px] text-neutral-300 transition hover:text-white"
                 >
                   linkedin.com/in/andrew-zeng1/
                 </a>
@@ -55,7 +55,7 @@ export default function ContactPage() {
 
               <div>
                 <h2 className="label mb-2">Location</h2>
-                <p className="text-[15px] text-zinc-400">
+                <p className="text-[15px] text-neutral-400">
                   Pittsburgh, PA — Boston, MA
                 </p>
               </div>

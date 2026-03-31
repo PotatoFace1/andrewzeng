@@ -67,7 +67,7 @@ export default function HeroWaveform() {
         else path.lineTo(x, y);
       }
 
-      ctx.strokeStyle = "rgba(228, 228, 231, 0.36)";
+      ctx.strokeStyle = "rgba(229, 229, 229, 0.36)";
       ctx.lineWidth = 1.2;
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
@@ -99,7 +99,7 @@ export default function HeroWaveform() {
 
   return (
     <div
-      className="relative h-[200px] w-full rounded-md border border-zinc-800/60 bg-zinc-950/40 md:h-[260px] lg:h-[280px]"
+      className="relative h-[200px] w-full rounded-md border border-neutral-800/60 bg-neutral-950/40 md:h-[260px] lg:h-[280px]"
       aria-hidden="true"
     >
       <canvas
@@ -107,7 +107,7 @@ export default function HeroWaveform() {
         className="absolute inset-0 h-full w-full"
         role="presentation"
       />
-      <span className="pointer-events-none absolute bottom-3 right-3 font-mono text-[10px] tracking-wide text-zinc-600/90">
+      <span className="pointer-events-none absolute bottom-3 right-3 font-mono text-[10px] tracking-wide text-neutral-600/90">
         scope
       </span>
     </div>
