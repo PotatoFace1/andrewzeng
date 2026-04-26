@@ -181,7 +181,7 @@ The motor controllers also needed configuration and tuning to match the throttle
     ],
     date: "May 2024 — August 2024",
     github: null,
-    thumbnailSrc: "/temp.png",
+    thumbnailSrc: "/rcar.jpeg",
     sections: [
       {
         heading: "Summary",
