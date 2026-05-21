@@ -17,7 +17,7 @@ export default function Home() {
                 Projects
               </Link>
               <a
-                href="/Zeng%20Co-op%20Resume%20(5).pdf"
+                href="/Zeng%20Co-op%20Resume%20(6).pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"
@@ -55,7 +55,7 @@ export default function Home() {
                   real-time systems.
                 </p>
                 <p className="text-neutral-400">
-                  intern @{" "}
+                  Intern @{" "}
                   <a
                     href="https://westinghousenuclear.com"
                     target="_blank"
