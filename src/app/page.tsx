@@ -55,7 +55,7 @@ export default function Home() {
                   real-time systems.
                 </p>
                 <p className="text-neutral-400">
-                  Incoming intern @{" "}
+                  Intern at{" "}
                   <a
                     href="https://westinghousenuclear.com"
                     target="_blank"
