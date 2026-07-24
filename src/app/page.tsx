@@ -55,7 +55,7 @@ export default function Home() {
                   real-time systems.
                 </p>
                 <p className="text-neutral-400">
-                  Intern @{" "}
+                  Co-op @{" "}
                   <a
                     href="https://opentrons.com"
                     target="_blank"
