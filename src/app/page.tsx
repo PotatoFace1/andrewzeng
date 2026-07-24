@@ -57,12 +57,12 @@ export default function Home() {
                 <p className="text-neutral-400">
                   Intern @{" "}
                   <a
-                    href="https://westinghousenuclear.com"
+                    href="https://opentrons.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-prose"
                   >
-                    Westinghouse Nuclear Co.
+                    Opentrons Labworks Inc.
                   </a>
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default function Home() {
           <article className="surface-card p-6">
             <p className="label mb-3">Location</p>
             <p className="text-sm font-medium text-neutral-100">
-              Boston, MA / Pittsburgh, PA
+              New York, NY
             </p>
             <p className="mt-1 text-sm text-neutral-500">
               Open to roles &amp; collaborations

@@ -56,7 +56,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="label mb-2">Location</h2>
                 <p className="text-[15px] text-neutral-400">
-                  Pittsburgh, PA — Boston, MA
+                  New York, NY
                 </p>
               </div>
             </div>
