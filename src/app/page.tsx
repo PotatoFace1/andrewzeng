@@ -17,7 +17,7 @@ export default function Home() {
                 Projects
               </Link>
               <a
-                href="/Zeng%20Co-op%20Resume%20(6).pdf"
+                href="/Zeng%20Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"
