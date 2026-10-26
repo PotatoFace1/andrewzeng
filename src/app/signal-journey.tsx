@@ -103,7 +103,7 @@ export default function SignalJourney() {
   }
   return <main className="signal-home">
     <header className="signal-header"><Link className="signal-wordmark" href="/">Andrew Zeng<span className="signal-dot"/></Link><nav aria-label="Main navigation"><Link href="/projects">Projects</Link><a href="/Zeng%20Resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a><Link href="/contact">Contact</Link></nav></header>
-    <section className="signal-intro"><div><p className="signal-eyebrow">Electrical engineering × computer science</p><h1>Hi, I’m Andrew.</h1><p>Building embedded systems, radar, and things that move.</p></div><div className="signal-affiliation"><span>Northeastern University</span><a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">Co-op @ Opentrons Labworks ↗</a></div></section>
+    <section className="signal-intro"><div><p className="signal-eyebrow">Electrical engineering × computer science</p><h1>Hi, I’m Andrew.</h1><p>Electrical Engineering × Computer Science. Currently building <a className="signal-robotics" href="https://tsquaredrobotics.us" target="_blank" rel="noopener noreferrer">t<sup>2</sup> Robotics ↗</a></p></div><div className="signal-affiliation"><span>Northeastern University</span><a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">Co-op @ Opentrons Labworks ↗</a><span className="signal-location">New York, NY</span></div></section>
     <section className="signal-experience" aria-label="Explore projects along an FMCW wave">
       <div className="signal-caption"><span><i/> 01 — A timeline of my work</span><span>Scroll · drag · explore →</span></div>
       <div ref={rail} className="signal-viewport" role="region" tabIndex={0} aria-label="Horizontal project wave. Scroll, drag, or use arrow keys. Tab to project links."
@@ -135,7 +135,6 @@ export default function SignalJourney() {
         </div>
       </div>
     </section>
-    <footer className="signal-footer"><div className="signal-footer-note"><span>New York, NY · Open to collaboration</span></div><div className="signal-controls"><div className="signal-progress"><span style={{width:`${(active+1)/nodes.length*100}%`}}/></div><div className="signal-control-row"><span>0{active+1} <span className="signal-muted">/ 05</span></span><div><button onClick={()=>go(selected.current-1)} aria-label="Previous project">←</button><button onClick={()=>go(selected.current+1)} aria-label="Next project">→</button></div></div></div></footer>
   </main>;
 }
 
